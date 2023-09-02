@@ -1,0 +1,1394 @@
+ 'Se define el tamaño de la ventana
+GraphicsWindow.Width = 1400
+GraphicsWindow.Height = 800
+
+path = Program.Directory
+canRunAnswerClicked = "True"
+
+background = path + ".\Pics\Background\background.png"
+background_rules = path + ".\Pics\Background\backgroundrules.png"
+background_level_1 = path + ".\Pics\Background\backgroundlevel1.png"
+background_level_2 = path + ".\Pics\Background\backgroundlevel2.png"
+background_level_3 = path + ".\Pics\Background\backgroundlevel3.png"
+background_level_4 = path + ".\Pics\Background\backgroundlevel4.png"
+background_level_5 = path + ".\Pics\Background\backgroundlevel5.png"
+background_level_6 = path + ".\Pics\Background\backgroundlevel6.png"
+background_level_7 = path + ".\Pics\Background\backgroundlevel7.png"
+background_level_8 = path + ".\Pics\Background\backgroundlevel8.png"
+background_level_9 = path + ".\Pics\Background\backgroundlevel9.png"
+background_level_10 = path + ".\Pics\Background\backgroundlevel10.png"
+background_levels_selector = path + ".\Pics\Background\backgroundlevelselector.png"
+backgroundSound = path + ".\Sounds\Sounds\gamemusic.mp3"
+WinnerSound = path + ".\Sounds\Sounds\Success.wav"
+GameOverSound = path + ".\Sounds\Sounds\GameOver.wav"
+
+soundFlag = 1
+
+
+'Definimos un array para almacenar las opciones de las diferentes categorias
+
+'Colores (Colors)
+Colors[1] = "Red"
+Colors[2] = "Yellow"
+Colors[3] = "Green"
+Colors[4] = "Blue"
+Colors[5] = "Black"
+Colors[6] = "White"
+Colors[7] = "Purple"
+Colors[8] = "Pink"
+Colors[9] = "Orange"
+Colors[10] = "Brown"
+Colors[11] = "Gray"
+Colors[12] = "Gold"
+
+ColorsPics[1] = path + ".\Pics\Level1\red.png"
+ColorsPics[2] = path + ".\Pics\Level1\yellow.png"
+ColorsPics[3] = path + ".\Pics\Level1\green.png"
+ColorsPics[4] = path + ".\Pics\Level1\blue.png"
+ColorsPics[5] = path + ".\Pics\Level1\black.png"
+ColorsPics[6] = path + ".\Pics\Level1\white.png"
+ColorsPics[7] = path + ".\Pics\Level1\purple.png"
+ColorsPics[8] = path + ".\Pics\Level1\pink.png"
+ColorsPics[9] = path + ".\Pics\Level1\orange.png"
+ColorsPics[10] = path + ".\Pics\Level1\brown.png"
+ColorsPics[11] = path + ".\Pics\Level1\gray.png"
+ColorsPics[12] = path + ".\Pics\Level1\gold.png"
+
+ColorsSounds[1] = path + ".\Sounds\Colors\Red.wav"
+ColorsSounds[2] = path + ".\Sounds\Colors\Yellow.wav"
+ColorsSounds[3] = path + ".\Sounds\Colors\Green.wav"
+ColorsSounds[4] = path + ".\Sounds\Colors\Blue.wav"
+ColorsSounds[5] = path + ".\Sounds\Colors\Black.wav"
+ColorsSounds[6] = path + ".\Sounds\Colors\White.wav"
+ColorsSounds[7] = path + ".\Sounds\Colors\Purple.wav"
+ColorsSounds[8] = path + ".\Sounds\Colors\Pink.wav"
+ColorsSounds[9] = path + ".\Sounds\Colors\Orange.wav"
+ColorsSounds[10] = path + ".\Sounds\Colors\Brown.wav"
+ColorsSounds[11] = path + ".\Sounds\Colors\Gray.wav"
+ColorsSounds[12] = path + ".\Sounds\Colors\Gold.wav"
+
+'Animales (Animals)
+Animals[1] = "Dog"
+Animals[2] = "Cat"
+Animals[3] = "Elephant"
+Animals[4] = "Lion"
+Animals[5] = "Bird"
+Animals[6] = "Fish"
+Animals[7] = "Frog"
+Animals[8] = "Bear"
+Animals[9] = "Rabbit"
+Animals[10] = "Turtle"
+Animals[11] = "Giraffe"
+Animals[12] = "Monkey"
+
+AnimalsPics[1] = path + ".\Pics\Level2\dog.png"
+AnimalsPics[2] = path + ".\Pics\Level2\cat.png"
+AnimalsPics[3] = path + ".\Pics\Level2\elephant.png"
+AnimalsPics[4] = path + ".\Pics\Level2\lion.png"
+AnimalsPics[5] = path + ".\Pics\Level2\bird.png"
+AnimalsPics[6] = path + ".\Pics\Level2\fish.png"
+AnimalsPics[7] = path + ".\Pics\Level2\frog.png"
+AnimalsPics[8] = path + ".\Pics\Level2\bear.png"
+AnimalsPics[9] = path + ".\Pics\Level2\rabbit.png"
+AnimalsPics[10] = path + ".\Pics\Level2\turtle.png"
+AnimalsPics[11] = path + ".\Pics\Level2\girrafe.png"
+AnimalsPics[12] = path + ".\Pics\Level2\monkey.png"
+
+AnimalSounds[1] = path + ".\Sounds\Animals\Dog.wav"
+AnimalSounds[2] = path + ".\Sounds\Animals\Cat.wav"
+AnimalSounds[3] = path + ".\Sounds\Animals\Elephant.wav"
+AnimalSounds[4] = path + ".\Sounds\Animals\Lion.wav"
+AnimalSounds[5] = path + ".\Sounds\Animals\Bird.wav"
+AnimalSounds[6] = path + ".\Sounds\Animals\Fish.wav"
+AnimalSounds[7] = path + ".\Sounds\Animals\Frog.wav"
+AnimalSounds[8] = path + ".\Sounds\Animals\Bear.wav"
+AnimalSounds[9] = path + ".\Sounds\Animals\Rabbit.wav"
+AnimalSounds[10] = path + ".\Sounds\Animals\Turtle.wav"
+AnimalSounds[11] = path + ".\Sounds\Animals\Giraffe.wav"
+AnimalSounds[12] = path + ".\Sounds\Animals\Monkey.wav"
+
+'Objetos cotidianos (Everyday Objects)
+EverydayObjects[1] = "Table"
+EverydayObjects[2] = "Chair"
+EverydayObjects[3] = "Bed"
+EverydayObjects[4] = "Car"
+EverydayObjects[5] = "Book"
+EverydayObjects[6] = "Ball"
+EverydayObjects[7] = "Cup"
+EverydayObjects[8] = "Laptop"
+EverydayObjects[9] = "Phone"
+EverydayObjects[10] = "Door"
+EverydayObjects[11] = "Window"
+EverydayObjects[12] = "Clock"
+
+EverydayObjectsPics[1] = path + ".\Pics\Level3\table.png"
+EverydayObjectsPics[2] = path + ".\Pics\Level3\chair.png"
+EverydayObjectsPics[3] = path + ".\Pics\Level3\bed.png"
+EverydayObjectsPics[4] = path + ".\Pics\Level3\car.png"
+EverydayObjectsPics[5] = path + ".\Pics\Level3\book.png"
+EverydayObjectsPics[6] = path + ".\Pics\Level3\ball.png"
+EverydayObjectsPics[7] = path + ".\Pics\Level3\cup.png"
+EverydayObjectsPics[8] = path + ".\Pics\Level3\laptop.png"
+EverydayObjectsPics[9] = path + ".\Pics\Level3\phone.png"
+EverydayObjectsPics[10] = path + ".\Pics\Level3\door.png"
+EverydayObjectsPics[11] = path + ".\Pics\Level3\window.png"
+EverydayObjectsPics[12] = path + ".\Pics\Level3\clock.png"
+
+EverydayObjectsSounds[1] = path + ".\Sounds\EverydayObjects\Table.wav"
+EverydayObjectsSounds[2] = path + ".\Sounds\EverydayObjects\Chair.wav"
+EverydayObjectsSounds[3] = path + ".\Sounds\EverydayObjects\Bed.wav"
+EverydayObjectsSounds[4] = path + ".\Sounds\EverydayObjects\Car.wav"
+EverydayObjectsSounds[5] = path + ".\Sounds\EverydayObjects\Book.wav"
+EverydayObjectsSounds[6] = path + ".\Sounds\EverydayObjects\Ball.wav"
+EverydayObjectsSounds[7] = path + ".\Sounds\EverydayObjects\Cup.wav"
+EverydayObjectsSounds[8] = path + ".\Sounds\EverydayObjects\Laptop.wav"
+EverydayObjectsSounds[9] = path + ".\Sounds\EverydayObjects\Phone.wav"
+EverydayObjectsSounds[10] = path + ".\Sounds\EverydayObjects\Door.wav"
+EverydayObjectsSounds[11] = path + ".\Sounds\EverydayObjects\Window.wav"
+EverydayObjectsSounds[12] = path + ".\Sounds\EverydayObjects\Clock.wav"
+
+'' Formas geométricas (Geometric Shapes)
+GeometricShapes[1] = "Circle"
+GeometricShapes[2] = "Square"
+GeometricShapes[3] = "Triangle"
+GeometricShapes[4] = "Rectangle"
+GeometricShapes[5] = "Diamond"
+GeometricShapes[6] = "Oval"
+GeometricShapes[7] = "Pentagon"
+GeometricShapes[8] = "Hexagon"
+GeometricShapes[9] = "Octagon"
+GeometricShapes[10] = "Star"
+GeometricShapes[11] = "Heart"
+GeometricShapes[12] = "Cross"
+
+GeometricShapesPics[1] = path + ".\Pics\Level4\circle.png"
+GeometricShapesPics[2] = path + ".\Pics\Level4\square.png"
+GeometricShapesPics[3] = path + ".\Pics\Level4\triangle.png"
+GeometricShapesPics[4] = path + ".\Pics\Level4\rectangle.png"
+GeometricShapesPics[5] = path + ".\Pics\Level4\diamond.png"
+GeometricShapesPics[6] = path + ".\Pics\Level4\oval.png"
+GeometricShapesPics[7] = path + ".\Pics\Level4\pentagon.png"
+GeometricShapesPics[8] = path + ".\Pics\Level4\hexagon.png"
+GeometricShapesPics[9] = path + ".\Pics\Level4\octagon.png"
+GeometricShapesPics[10] = path + ".\Pics\Level4\star.png"
+GeometricShapesPics[11] = path + ".\Pics\Level4\heart.png"
+GeometricShapesPics[12] = path + ".\Pics\Level4\cross.png"
+
+GeometricShapesSounds[1] = path + ".\Sounds\GeometricShapes\Circle.wav"
+GeometricShapesSounds[2] = path + ".\Sounds\GeometricShapes\Square.wav"
+GeometricShapesSounds[3] = path + ".\Sounds\GeometricShapes\Triangle.wav"
+GeometricShapesSounds[4] = path + ".\Sounds\GeometricShapes\Rectangle.wav"
+GeometricShapesSounds[5] = path + ".\Sounds\GeometricShapes\Diamond.wav"
+GeometricShapesSounds[6] = path + ".\Sounds\GeometricShapes\Oval.wav"
+GeometricShapesSounds[7] = path + ".\Sounds\GeometricShapes\Pentagon.wav"
+GeometricShapesSounds[8] = path + ".\Sounds\GeometricShapes\Hexagon.wav"
+GeometricShapesSounds[9] = path + ".\Sounds\GeometricShapes\Octagon.wav"
+GeometricShapesSounds[10] = path + ".\Sounds\GeometricShapes\Star.wav"
+GeometricShapesSounds[11] = path + ".\Sounds\GeometricShapes\Heart.wav"
+GeometricShapesSounds[12] = path + ".\Sounds\GeometricShapes\Cross.wav"
+
+' Ropa (Clothing)
+Clothing[1] = "Shirt"
+Clothing[2] = "Pants"
+Clothing[3] = "Dress"
+Clothing[4] = "Shoes"
+Clothing[5] = "Hat"
+Clothing[6] = "Socks"
+Clothing[7] = "Jacket"
+Clothing[8] = "Skirt"
+Clothing[9] = "Sweater"
+Clothing[10] = "Gloves"
+Clothing[11] = "Scarf"
+Clothing[12] = "Shorts"
+
+ClothingPics[1] = path + ".\Pics\Level5\shirt.png"
+ClothingPics[2] = path + ".\Pics\Level5\pants.png"
+ClothingPics[3] = path + ".\Pics\Level5\dress.png"
+ClothingPics[4] = path + ".\Pics\Level5\shoes.png"
+ClothingPics[5] = path + ".\Pics\Level5\hat.png"
+ClothingPics[6] = path + ".\Pics\Level5\socks.png"
+ClothingPics[7] = path + ".\Pics\Level5\jacket.png"
+ClothingPics[8] = path + ".\Pics\Level5\skirt.png"
+ClothingPics[9] = path + ".\Pics\Level5\sweater.png"
+ClothingPics[10] = path + ".\Pics\Level5\gloves.png"
+ClothingPics[11] = path + ".\Pics\Level5\scarf.png"
+ClothingPics[12] = path + ".\Pics\Level5\shorts.png"
+
+ClothingSounds[1] = path + ".\Sounds\Clothing\Shirt.wav"
+ClothingSounds[2] = path + ".\Sounds\Clothing\Pants.wav"
+ClothingSounds[3] = path + ".\Sounds\Clothing\Dress.wav"
+ClothingSounds[4] = path + ".\Sounds\Clothing\Shoes.wav"
+ClothingSounds[5] = path + ".\Sounds\Clothing\Hat.wav"
+ClothingSounds[6] = path + ".\Sounds\Clothing\Socks.wav"
+ClothingSounds[7] = path + ".\Sounds\Clothing\Jacket.wav"
+ClothingSounds[8] = path + ".\Sounds\Clothing\Skirt.wav"
+ClothingSounds[9] = path + ".\Sounds\Clothing\Sweater.wav"
+ClothingSounds[10] = path + ".\Sounds\Clothing\Gloves.wav"
+ClothingSounds[11] = path + ".\Sounds\Clothing\Scarf.wav"
+ClothingSounds[12] = path + ".\Sounds\Clothing\Shorts.wav"
+
+' Comida y bebida (Food and Drinks)
+FoodAndDrinks[1] = "Apple"
+FoodAndDrinks[2] = "Banana"
+FoodAndDrinks[3] = "Orange"
+FoodAndDrinks[4] = "Grapes"
+FoodAndDrinks[5] = "Milk"
+FoodAndDrinks[6] = "Bread"
+FoodAndDrinks[7] = "Cheese"
+FoodAndDrinks[8] = "Juice"
+FoodAndDrinks[9] = "Water"
+FoodAndDrinks[10] = "Cake"
+FoodAndDrinks[11] = "Pizza"
+FoodAndDrinks[12] = "Ice Cream"
+
+FoodAndDrinksPics[1] = path + ".\Pics\Level6\apple.png"
+FoodAndDrinksPics[2] = path + ".\Pics\Level6\banana.png"
+FoodAndDrinksPics[3] = path + ".\Pics\Level6\orange.png"
+FoodAndDrinksPics[4] = path + ".\Pics\Level6\grapes.png"
+FoodAndDrinksPics[5] = path + ".\Pics\Level6\milk.png"
+FoodAndDrinksPics[6] = path + ".\Pics\Level6\bread.png"
+FoodAndDrinksPics[7] = path + ".\Pics\Level6\cheese.png"
+FoodAndDrinksPics[8] = path + ".\Pics\Level6\juice.png"
+FoodAndDrinksPics[9] = path + ".\Pics\Level6\water.png"
+FoodAndDrinksPics[10] = path + ".\Pics\Level6\cake.png"
+FoodAndDrinksPics[11] = path + ".\Pics\Level6\pizza.png"
+FoodAndDrinksPics[12] = path + ".\Pics\Level6\ice_cream.png"
+
+FoodAndDrinksSounds[1] = path + ".\Sounds\FoodAndDrinks\Apple.wav"
+FoodAndDrinksSounds[2] = path + ".\Sounds\FoodAndDrinks\Banana.wav"
+FoodAndDrinksSounds[3] = path + ".\Sounds\FoodAndDrinks\Orange.wav"
+FoodAndDrinksSounds[4] = path + ".\Sounds\FoodAndDrinks\Grapes.wav"
+FoodAndDrinksSounds[5] = path + ".\Sounds\FoodAndDrinks\Milk.wav"
+FoodAndDrinksSounds[6] = path + ".\Sounds\FoodAndDrinks\Bread.wav"
+FoodAndDrinksSounds[7] = path + ".\Sounds\FoodAndDrinks\Cheese.wav"
+FoodAndDrinksSounds[8] = path + ".\Sounds\FoodAndDrinks\Juice.wav"
+FoodAndDrinksSounds[9] = path + ".\Sounds\FoodAndDrinks\Water.wav"
+FoodAndDrinksSounds[10] = path + ".\Sounds\FoodAndDrinks\Cake.wav"
+FoodAndDrinksSounds[11] = path + ".\Sounds\FoodAndDrinks\ Pizza.wav"
+FoodAndDrinksSounds[12] = path + ".\Sounds\FoodAndDrinks\Ice_Cream.wav"
+
+' Partes del cuerpo (Body Parts)
+BodyParts[1] = "Head"
+BodyParts[2] = "Eyes"
+BodyParts[3] = "Ear"
+BodyParts[4] = "Nose"
+BodyParts[5] = "Mouth"
+BodyParts[6] = "Hand"
+BodyParts[7] = "Feet"
+BodyParts[8] = "Fingers"
+BodyParts[9] = "Toes"
+BodyParts[10] = "Hair"
+BodyParts[11] = "Teeth"
+BodyParts[12] = "Arms"
+
+BodyPartsPics[1] = path + ".\Pics\Level7\head.png"
+BodyPartsPics[2] = path + ".\Pics\Level7\eyes.png"
+BodyPartsPics[3] = path + ".\Pics\Level7\ear.png"
+BodyPartsPics[4] = path + ".\Pics\Level7\nose.png"
+BodyPartsPics[5] = path + ".\Pics\Level7\mouth.png"
+BodyPartsPics[6] = path + ".\Pics\Level7\hand.png"
+BodyPartsPics[7] = path + ".\Pics\Level7\feet.png"
+BodyPartsPics[8] = path + ".\Pics\Level7\fingers.png"
+BodyPartsPics[9] = path + ".\Pics\Level7\toes.png"
+BodyPartsPics[10] = path + ".\Pics\Level7\hair.png"
+BodyPartsPics[11] = path + ".\Pics\Level7\teeth.png"
+BodyPartsPics[12] = path + ".\Pics\Level7\arms.png"
+
+BodyPartsSounds[1] = path + ".\Sounds\BodyParts\Head.wav"
+BodyPartsSounds[2] = path + ".\Sounds\BodyParts\Eyes.wav"
+BodyPartsSounds[3] = path + ".\Sounds\BodyParts\Ear.wav"
+BodyPartsSounds[4] = path + ".\Sounds\BodyParts\Nose.wav"
+BodyPartsSounds[5] = path + ".\Sounds\BodyParts\Mouth.wav"
+BodyPartsSounds[6] = path + ".\Sounds\BodyParts\Hand.wav"
+BodyPartsSounds[7] = path + ".\Sounds\BodyParts\Feet.wav"
+BodyPartsSounds[8] = path + ".\Sounds\BodyParts\Fingers.wav"
+BodyPartsSounds[9] = path + ".\Sounds\BodyParts\Toes.wav"
+BodyPartsSounds[10] = path + ".\Sounds\BodyParts\Hair.wav"
+BodyPartsSounds[11] = path + ".\Sounds\BodyParts\Teeth.wav"
+BodyPartsSounds[12] = path + ".\Sounds\BodyParts\Arms.wav"
+
+' Números y conteo (Numbers and Counting)
+NumbersAndCounting[1] = "One"
+NumbersAndCounting[2] = "Two"
+NumbersAndCounting[3] = "Three"
+NumbersAndCounting[4] = "Four"
+NumbersAndCounting[5] = "Five"
+NumbersAndCounting[6] = "Six"
+NumbersAndCounting[7] = "Seven"
+NumbersAndCounting[8] = "Eight"
+NumbersAndCounting[9] = "Nine"
+NumbersAndCounting[10] = "Ten"
+NumbersAndCounting[11] = "Zero"
+NumbersAndCounting[12] = "One Hundred"
+
+NumbersAndCountingPics[1] = path + ".\Pics\Level8\one.png"
+NumbersAndCountingPics[2] = path + ".\Pics\Level8\two.png"
+NumbersAndCountingPics[3] = path + ".\Pics\Level8\three.png"
+NumbersAndCountingPics[4] = path + ".\Pics\Level8\four.png"
+NumbersAndCountingPics[5] = path + ".\Pics\Level8\five.png"
+NumbersAndCountingPics[6] = path + ".\Pics\Level8\six.png"
+NumbersAndCountingPics[7] = path + ".\Pics\Level8\seven.png"
+NumbersAndCountingPics[8] = path + ".\Pics\Level8\eight.png"
+NumbersAndCountingPics[9] = path + ".\Pics\Level8\nine.png"
+NumbersAndCountingPics[10] = path + ".\Pics\Level8\ten.png"
+NumbersAndCountingPics[11] = path + ".\Pics\Level8\zero.png"
+NumbersAndCountingPics[12] = path + ".\Pics\Level8\one_hundred.png"
+
+NumbersAndCountingSounds[1] = path + ".\Sounds\NumbersAndCounting\One.wav"
+NumbersAndCountingSounds[2] = path + ".\Sounds\NumbersAndCounting\Two.wav"
+NumbersAndCountingSounds[3] = path + ".\Sounds\NumbersAndCounting\Three.wav"
+NumbersAndCountingSounds[4] = path + ".\Sounds\NumbersAndCounting\Four.wav"
+NumbersAndCountingSounds[5] = path + ".\Sounds\NumbersAndCounting\Five.wav"
+NumbersAndCountingSounds[6] = path + ".\Sounds\NumbersAndCounting\Six.wav"
+NumbersAndCountingSounds[7] = path + ".\Sounds\NumbersAndCounting\Seven.wav"
+NumbersAndCountingSounds[8] = path + ".\Sounds\NumbersAndCounting\Eight.wav"
+NumbersAndCountingSounds[9] = path + ".\Sounds\NumbersAndCounting\Nine.wav"
+NumbersAndCountingSounds[10] = path + ".\Sounds\NumbersAndCounting\Ten.wav"
+NumbersAndCountingSounds[11] = path + ".\Sounds\NumbersAndCounting\Zero.wav"
+NumbersAndCountingSounds[12] = path + ".\Sounds\NumbersAndCounting\One_Hundred.wav"
+
+' Tiempo y clima (Time and Weather)
+TimeAndWeather[1] = "Sun"
+TimeAndWeather[2] = "Moon"
+TimeAndWeather[3] = "Rain"
+TimeAndWeather[4] = "Cloud"
+TimeAndWeather[5] = "Snow"
+TimeAndWeather[6] = "Wind"
+TimeAndWeather[7] = "Autumn"
+TimeAndWeather[8] = "Thunder"
+TimeAndWeather[9] = "Day"
+TimeAndWeather[10] = "Night"
+TimeAndWeather[11] = "Morning"
+TimeAndWeather[12] = "Evening"
+
+TimeAndWeatherPics[1] = path + ".\Pics\Level9\sun.png"
+TimeAndWeatherPics[2] = path + ".\Pics\Level9\moon.png"
+TimeAndWeatherPics[3] = path + ".\Pics\Level9\rain.png"
+TimeAndWeatherPics[4] = path + ".\Pics\Level9\clouds.png"
+TimeAndWeatherPics[5] = path + ".\Pics\Level9\snow.png"
+TimeAndWeatherPics[6] = path + ".\Pics\Level9\wind.png"
+TimeAndWeatherPics[7] = path + ".\Pics\Level9\autumn.png"
+TimeAndWeatherPics[8] = path + ".\Pics\Level9\thunder.png"
+TimeAndWeatherPics[9] = path + ".\Pics\Level9\day.png"
+TimeAndWeatherPics[10] = path + ".\Pics\Level9\night.png"
+TimeAndWeatherPics[11] = path + ".\Pics\Level9\morning.png"
+TimeAndWeatherPics[12] = path + ".\Pics\Level9\evening.png"
+
+TimeAndWeatherSounds[1] = path + ".\Sounds\TimeAndWeather\Sun.wav"
+TimeAndWeatherSounds[2] = path + ".\Sounds\TimeAndWeather\Moon.wav"
+TimeAndWeatherSounds[3] = path + ".\Sounds\TimeAndWeather\Rain.wav"
+TimeAndWeatherSounds[4] = path + ".\Sounds\TimeAndWeather\Cloud.wav"
+TimeAndWeatherSounds[5] = path + ".\Sounds\TimeAndWeather\Snow.wav"
+TimeAndWeatherSounds[6] = path + ".\Sounds\TimeAndWeather\Wind.wav"
+TimeAndWeatherSounds[7] = path + ".\Sounds\TimeAndWeather\Autumn.wav"
+TimeAndWeatherSounds[8] = path + ".\Sounds\TimeAndWeather\Thunder.wav"
+TimeAndWeatherSounds[9] = path + ".\Sounds\TimeAndWeather\Day.wav"
+TimeAndWeatherSounds[10] = path + ".\Sounds\TimeAndWeather\Night.wav"
+TimeAndWeatherSounds[11] = path + ".\Sounds\TimeAndWeather\Morning.wav"
+TimeAndWeatherSounds[12] = path + ".\Sounds\TimeAndWeather\Evening.wav"
+
+' Acciones y verbos (Actions and Verbs)
+ActionsAndVerbs[1] = "Jump"
+ActionsAndVerbs[2] = "Run"
+ActionsAndVerbs[3] = "Swim"
+ActionsAndVerbs[4] = "Eat"
+ActionsAndVerbs[5] = "Sleep"
+ActionsAndVerbs[6] = "Dance"
+ActionsAndVerbs[7] = "Sing"
+ActionsAndVerbs[8] = "Read"
+ActionsAndVerbs[9] = "Draw"
+ActionsAndVerbs[10] = "Listen"
+ActionsAndVerbs[11] = "Clap"
+ActionsAndVerbs[12] = "Laugh"
+
+ActionsAndVerbsPics[1] = path + ".\Pics\Level10\jump.png"
+ActionsAndVerbsPics[2] = path + ".\Pics\Level10\run.png"
+ActionsAndVerbsPics[3] = path + ".\Pics\Level10\swim.png"
+ActionsAndVerbsPics[4] = path + ".\Pics\Level10\eat.png"
+ActionsAndVerbsPics[5] = path + ".\Pics\Level10\sleep.png"
+ActionsAndVerbsPics[6] = path + ".\Pics\Level10\dance.png"
+ActionsAndVerbsPics[7] = path + ".\Pics\Level10\sing.png"
+ActionsAndVerbsPics[8] = path + ".\Pics\Level10\read.png"
+ActionsAndVerbsPics[9] = path + ".\Pics\Level10\draw.png"
+ActionsAndVerbsPics[10] = path + ".\Pics\Level10\listen.png"
+ActionsAndVerbsPics[11] = path + ".\Pics\Level10\clap.png"
+ActionsAndVerbsPics[12] = path + ".\Pics\Level10\laugh.png"
+
+ActionsAndVerbsSounds[1] = path + ".\Sounds\ActionsAndVerbs\Jump.wav"
+ActionsAndVerbsSounds[2] = path + ".\Sounds\ActionsAndVerbs\Run.wav"
+ActionsAndVerbsSounds[3] = path + ".\Sounds\ActionsAndVerbs\Swim.wav"
+ActionsAndVerbsSounds[4] = path + ".\Sounds\ActionsAndVerbs\Eat.wav"
+ActionsAndVerbsSounds[5] = path + ".\Sounds\ActionsAndVerbs\Sleep.wav"
+ActionsAndVerbsSounds[6] = path + ".\Sounds\ActionsAndVerbs\Dance.wav"
+ActionsAndVerbsSounds[7] = path + ".\Sounds\ActionsAndVerbs\Sing.wav"
+ActionsAndVerbsSounds[8] = path + ".\Sounds\ActionsAndVerbs\Read.wav"
+ActionsAndVerbsSounds[9] = path + ".\Sounds\ActionsAndVerbs\Draw.wav"
+ActionsAndVerbsSounds[10] = path + ".\Sounds\ActionsAndVerbs\Listen.wav"
+ActionsAndVerbsSounds[11] = path + ".\Sounds\ActionsAndVerbs\Clap.wav"
+ActionsAndVerbsSounds[12] = path + ".\Sounds\ActionsAndVerbs\Laugh.wav"
+
+' Variables para almacenar los botones de nivel
+LevelButtons[10]  = ""
+
+'Propiedades del gráfico del menú principal
+Sub CreateMainMenu
+  GraphicsWindow.Clear()
+
+  GraphicsWindow.BackgroundColor = GraphicsWindow.GetColorFromRGB(255, 255, 255) ' Blanco
+  GraphicsWindow.FontSize = 30
+  GraphicsWindow.CanResize = "False"
+  GraphicsWindow.BrushColor = GraphicsWindow.GetColorFromRGB(0, 0, 0) ' Negro
+  GraphicsWindow.DrawImage(background,0,0)
+  
+  ' Definición de los botones de inicio
+  StartButton = Controls.AddButton(" Jugar ", 681.5, 300)
+  ExitButton = Controls.AddButton("  Salir  ", 680.5, 400)
+  
+  ' Pantalla principal
+  LinguaPlay()
+EndSub
+
+
+Sub LinguaPlay
+  GraphicsWindow.FontSize = 60
+  GraphicsWindow.CanResize = "False"
+  GraphicsWindow.BrushColor = GraphicsWindow.GetColorFromRGB(0, 0, 0) ' Negro
+EndSub
+
+
+'Propiedades del gráfico del juego
+Sub CreateRuleWindow
+  GraphicsWindow.Clear()
+  GraphicsWindow.BackgroundColor = GraphicsWindow.GetColorFromRGB(255, 255, 255) ' Blanco
+  GraphicsWindow.FontSize = 25
+  GraphicsWindow.CanResize = "False"
+  GraphicsWindow.BrushColor = GraphicsWindow.GetColorFromRGB(0, 0, 0) ' Negro
+  GraphicsWindow.DrawImage(background_rules,0,0)
+  
+  'Pantalla de reglas
+  'GraphicsWindow.DrawBoundText(50, 100, 1300, "¡Bienvenido a LinguaPlay: Aventura en Inglés! En este juego, verás imágenes de diferentes animales en cuatro cartas. Junto a las cartas, habrá una pregunta sobre uno de los animales en inglés. Tu tarea es seleccionar la carta que coincida con la pregunta. Si seleccionas la carta correcta, recibirás un pulgar arriba y pasarás al siguiente nivel. Si no estás seguro, puedes intentarlo nuevamente. Pero recuerda, hay un límite de tiempo para cada pregunta, ¡así que sé rápido/a! Sigue avanzando a través de los niveles al obtener respuestas correctas. El juego termina después de algunos errores o cuando completes todos los niveles. ¡Diviértete aprendiendo palabras de animales en inglés y jugando el juego!")
+  
+  ' Definimos boton de next
+  NextButton = Controls.AddButton(" Siguiente ", 1225, 700)
+  ReturnButtonA = Controls.AddButton(" Regresar ", 49.5, 700)
+
+  
+EndSub
+
+
+Sub LevelSelect
+  Controls.ButtonClicked = Button_Clicked
+  GraphicsWindow.Clear()
+  GraphicsWindow.BackgroundColor = GraphicsWindow.GetColorFromRGB(255, 255, 255) ' Blanco
+  GraphicsWindow.FontSize = 25
+  GraphicsWindow.CanResize = "False"
+  GraphicsWindow.BrushColor = GraphicsWindow.GetColorFromRGB(0, 0, 0) ' Negro
+  GraphicsWindow.DrawImage(background_levels_selector,0,0)
+  
+  ' Dibuja botones para cada nivel
+  For level = 1 To 4
+    LevelButtons[level] = Controls.AddButton(" Nivel " + Text.Append(" ", level) + " ", 450, 300 + (level - 1) * 100)
+  EndFor
+  
+  For level = 5 To 8
+    LevelButtons[level] = Controls.AddButton(" Nivel " + Text.Append(" ", level) + " ", 650, -100 + (level - 1) * 100)
+  EndFor
+  
+    level = 9
+    LevelButtons[level] = Controls.AddButton(" Nivel " + Text.Append(" ", level) + " ", 850, -500 + (level - 1) * 100)
+    
+    level = 10
+    LevelButtons[level] = Controls.AddButton("Nivel " + Text.Append(" ", level) , 850, -500 + (level - 1) * 100)
+  
+  canRunAnswerClicked = "False"
+  ReturnButtonB = Controls.AddButton(" Regresar ", 1230, 700)
+  
+EndSub
+
+
+Sub ColorOptions
+  
+  GraphicsWindow.BrushColor = GraphicsWindow.GetColorFromRGB(255,255,255) ' Blanco
+  ' Generar un número aleatorio para seleccionar el color correcto
+  correctIndex = Math.GetRandomNumber(12)
+  correctOption = Colors[correctIndex]
+  correctOptionpic= ColorsPics[correctIndex]
+  correctOptionSound = ColorsSounds[correctIndex]
+  
+  ' Crear un array de opciones con la opción correcta y tres opciones incorrectas
+  optionsArray[1] = correctOption
+  optionIndex = 2
+  optionsArraypic[1] = correctOptionpic
+  optionsArraySound[1] = correctOptionSound
+  
+  ' Llenar el array con opciones incorrectas (excluyendo la correcta)
+  For  i = Math.GetRandomNumber(12)  To 12
+    If optionIndex <= 4 And Colors[i] <> correctOption Then
+      optionsArray[optionIndex] = Colors[i]
+      optionsArraypic[optionIndex] = ColorsPics[i]
+      optionsArraySound[optionIndex] = ColorsSounds[i]
+      optionIndex = optionIndex + 1
+    EndIf
+  EndFor
+
+  
+  ' Mezclar las opciones
+  For i = Array.GetItemCount(optionsArray) To 2 Step -1
+    j = Math.GetRandomNumber(i)
+    temp = optionsArray[i]
+    temp1 = optionsArraypic [i]
+    temp2 = optionsArraySound[i]
+    optionsArray[i] = optionsArray[j]
+    optionsArraypic[i] = optionsArraypic[j]
+    optionsArraySound[I] = optionsArraySound[j]
+    optionsArray[j] = temp
+    optionsArraypic[j] = temp1
+    optionsArraySound[j] = temp2
+  EndFor
+  
+  
+  ' Mostrar la pregunta y opciones
+  GraphicsWindow.FontSize = 40
+  GraphicsWindow.DrawText(730, 135, correctOption)
+  GraphicsWindow.FontSize = 25
+  GraphicsWindow.BrushColor = GraphicsWindow.GetColorFromRGB(0,0,0) ' Negro
+  
+  op1 = Controls.AddButton(optionsArray[1], 400, 400)
+  op1S = Controls.AddButton("🎶",555,400)
+  GraphicsWindow.DrawImage(optionsArraypic[1],400,236)
+  op2 = Controls.AddButton(optionsArray[2], 800, 400)
+  op2S = Controls.AddButton("🎶",955,400)
+  GraphicsWindow.DrawImage(optionsArraypic[2],800,236)
+  op3 = Controls.AddButton(optionsArray[3], 400, 700)
+  op3S = Controls.AddButton("🎶",555,700)
+  GraphicsWindow.DrawImage(optionsArraypic[3],400,536)
+  op4 = Controls.AddButton(optionsArray[4], 800, 700)
+  op4S = Controls.AddButton("🎶",955,700)  
+  GraphicsWindow.DrawImage(optionsArraypic[4],800,536)
+  
+
+EndSub
+
+
+
+Sub AnimalOptions
+  GraphicsWindow.BrushColor = GraphicsWindow.GetColorFromRGB(255,255,255) ' Blanco
+  ' Generar un número aleatorio para seleccionar la opcion
+  correctIndex = Math.GetRandomNumber(12)
+  correctOption = Animals[correctIndex]
+  correctOptionpic= AnimalsPics[correctIndex]
+  correctOptionSound = AnimalSounds[correctIndex]
+  
+  ' Crear un array de opciones con la opción correcta y tres opciones incorrectas
+  optionsArray[1] = correctOption
+  optionIndex = 2
+  optionsArraypic[1] = correctOptionpic
+  optionsArraySound[1] = correctOptionSound
+  
+  ' Llenar el array con opciones incorrectas (excluyendo la correcta)
+  For  i = Math.GetRandomNumber(12)  To 12
+    If optionIndex <= 4 And Animals[i] <> correctOption Then
+      optionsArray[optionIndex] = Animals[i]
+      optionsArraypic[optionIndex] = AnimalsPics[i]
+      optionsArraySound[optionIndex] = AnimalSounds[i]
+      optionIndex = optionIndex + 1
+    EndIf
+  EndFor
+
+  
+  ' Mezclar las opciones
+  For i = Array.GetItemCount(optionsArray) To 2 Step -1
+    j = Math.GetRandomNumber(i)
+    temp = optionsArray[i]
+    temp1 = optionsArraypic [i]
+    temp2 = optionsArraySound[i]
+    optionsArray[i] = optionsArray[j]
+    optionsArraypic[i] = optionsArraypic[j]
+    optionsArraySound[i] = optionsArraySound[j]
+    optionsArray[j] = temp
+    optionsArraypic[j] = temp1
+    optionsArraySound[j] = temp2
+  EndFor
+  
+  
+  ' Mostrar la pregunta y opciones
+  GraphicsWindow.FontSize = 40
+  GraphicsWindow.DrawText(730, 135, correctOption)
+  GraphicsWindow.FontSize = 25
+  GraphicsWindow.BrushColor = GraphicsWindow.GetColorFromRGB(0,0,0) ' Negro
+  
+  op1 = Controls.AddButton(optionsArray[1], 400, 400)
+  op1S = Controls.AddButton("🎶",555,400)
+  GraphicsWindow.DrawImage(optionsArraypic[1],400,236)
+  op2 = Controls.AddButton(optionsArray[2], 800, 400)
+  op2S = Controls.AddButton("🎶",955,400)
+  GraphicsWindow.DrawImage(optionsArraypic[2],800,236)
+  op3 = Controls.AddButton(optionsArray[3], 400, 700)
+  op3S = Controls.AddButton("🎶",555,700)
+  GraphicsWindow.DrawImage(optionsArraypic[3],400,536)
+  op4 = Controls.AddButton(optionsArray[4], 800, 700)
+  op4S = Controls.AddButton("🎶",955,700)  
+  GraphicsWindow.DrawImage(optionsArraypic[4],800,536)
+
+  
+EndSub
+
+Sub EverydayObjectsOptions
+   GraphicsWindow.BrushColor = GraphicsWindow.GetColorFromRGB(255,255,255) ' Blanco
+  ' Generar un número aleatorio para seleccionar la opcion
+  correctIndex = Math.GetRandomNumber(12)
+  correctOption = EverydayObjects[correctIndex]
+  correctOptionpic= EverydayObjectsPics[correctIndex]
+  correctOptionSound = EverydayObjectsSounds[correctIndex]
+  
+  ' Crear un array de opciones con la opción correcta y tres opciones incorrectas
+  optionsArray[1] = correctOption
+  optionIndex = 2
+  optionsArraypic[1] = correctOptionpic
+  optionsArraySound[1] = correctOptionSound
+  
+  ' Llenar el array con opciones incorrectas (excluyendo la correcta)
+  For  i = Math.GetRandomNumber(12)  To 12
+    If optionIndex <= 4 And EverydayObjects[i] <> correctOption Then
+      optionsArray[optionIndex] = EverydayObjects[i]
+      optionsArraypic[optionIndex] = EverydayObjectsPics[i]
+      optionsArraySound[optionIndex] =EverydayObjectsSounds[i]
+      optionIndex = optionIndex + 1
+    EndIf
+  EndFor
+
+  
+  ' Mezclar las opciones
+  For i = Array.GetItemCount(optionsArray) To 2 Step -1
+    j = Math.GetRandomNumber(i)
+    temp = optionsArray[i]
+    temp1 = optionsArraypic [i]
+    temp2 = optionsArraySound[i]
+    optionsArray[i] = optionsArray[j]
+    optionsArraypic[i] = optionsArraypic[j]
+    optionsArraySound[i] = optionsArraySound[j]
+    optionsArray[j] = temp
+    optionsArraypic[j] = temp1
+    optionsArraySound[j] = temp2
+  EndFor
+  
+  
+  ' Mostrar la pregunta y opciones
+  GraphicsWindow.FontSize = 40
+  GraphicsWindow.DrawText(730, 135, correctOption)
+  GraphicsWindow.FontSize = 25
+  GraphicsWindow.BrushColor = GraphicsWindow.GetColorFromRGB(0,0,0) ' Negro
+  
+  op1 = Controls.AddButton(optionsArray[1], 400, 400)
+  op1S = Controls.AddButton("🎶",555,400)
+  GraphicsWindow.DrawImage(optionsArraypic[1],400,236)
+  op2 = Controls.AddButton(optionsArray[2], 800, 400)
+  op2S = Controls.AddButton("🎶",955,400)
+  GraphicsWindow.DrawImage(optionsArraypic[2],800,236)
+  op3 = Controls.AddButton(optionsArray[3], 400, 700)
+  op3S = Controls.AddButton("🎶",555,700)
+  GraphicsWindow.DrawImage(optionsArraypic[3],400,536)
+  op4 = Controls.AddButton(optionsArray[4], 800, 700)
+  op4S = Controls.AddButton("🎶",955,700)  
+  GraphicsWindow.DrawImage(optionsArraypic[4],800,536)
+
+EndSub
+
+Sub GeometricShapesOptions 
+  GraphicsWindow.BrushColor = GraphicsWindow.GetColorFromRGB(255,255,255) ' Blanco
+  ' Generar un número aleatorio para seleccionar la opcion
+  correctIndex = Math.GetRandomNumber(12)
+  correctOption = GeometricShapes[correctIndex]
+  correctOptionpic= GeometricShapesPics[correctIndex]
+  correctOptionSound = GeometricShapesSounds[correctIndex]
+  
+  ' Crear un array de opciones con la opción correcta y tres opciones incorrectas
+  optionsArray[1] = correctOption
+  optionIndex = 2
+  optionsArraypic[1] = correctOptionpic
+  optionsArraySound[1] = correctOptionSound
+  
+  ' Llenar el array con opciones incorrectas (excluyendo la correcta)
+  For  i = Math.GetRandomNumber(12)  To 12
+    If optionIndex <= 4 And GeometricShapes[i] <> correctOption Then
+      optionsArray[optionIndex] = GeometricShapes[i]
+      optionsArraypic[optionIndex] = GeometricShapesPics[i]
+      optionsArraySound[optionIndex] = GeometricShapesSounds[i]
+      optionIndex = optionIndex + 1
+    EndIf
+  EndFor
+
+  
+  ' Mezclar las opciones
+  For i = Array.GetItemCount(optionsArray) To 2 Step -1
+    j = Math.GetRandomNumber(i)
+    temp = optionsArray[i]
+    temp1 = optionsArraypic [i]
+    temp2 = optionsArraySound[i]
+    optionsArray[i] = optionsArray[j]
+    optionsArraypic[i] = optionsArraypic[j]
+    optionsArraySound[i] = optionsArraySound[j]
+    optionsArray[j] = temp
+    optionsArraypic[j] = temp1
+    optionsArraySound[j] = temp2
+  EndFor
+  
+  
+  ' Mostrar la pregunta y opciones
+  GraphicsWindow.FontSize = 40
+  GraphicsWindow.DrawText(730, 135, correctOption)
+  GraphicsWindow.FontSize = 25
+  GraphicsWindow.BrushColor = GraphicsWindow.GetColorFromRGB(0,0,0) ' Negro
+  
+  op1 = Controls.AddButton(optionsArray[1], 400, 400)
+  op1S = Controls.AddButton("🎶",555,400)
+  GraphicsWindow.DrawImage(optionsArraypic[1],400,236)
+  op2 = Controls.AddButton(optionsArray[2], 800, 400)
+  op2S = Controls.AddButton("🎶",955,400)
+  GraphicsWindow.DrawImage(optionsArraypic[2],800,236)
+  op3 = Controls.AddButton(optionsArray[3], 400, 700)
+  op3S = Controls.AddButton("🎶",555,700)
+  GraphicsWindow.DrawImage(optionsArraypic[3],400,536)
+  op4 = Controls.AddButton(optionsArray[4], 800, 700)
+  op4S = Controls.AddButton("🎶",955,700)  
+  GraphicsWindow.DrawImage(optionsArraypic[4],800,536)
+
+EndSub
+
+Sub ClothingOptions
+   GraphicsWindow.BrushColor = GraphicsWindow.GetColorFromRGB(255,255,255) ' Blanco
+  ' Generar un número aleatorio para seleccionar la opcion
+  correctIndex = Math.GetRandomNumber(12)
+  correctOption = Clothing[correctIndex]
+  correctOptionpic= ClothingPics[correctIndex]
+  correctOptionSound = ClothingSounds[correctIndex]
+  
+  ' Crear un array de opciones con la opción correcta y tres opciones incorrectas
+  optionsArray[1] = correctOption
+  optionIndex = 2
+  optionsArraypic[1] = correctOptionpic
+  optionsArraySound[1] = correctOptionSound
+  
+  ' Llenar el array con opciones incorrectas (excluyendo la correcta)
+  For  i = Math.GetRandomNumber(12)  To 12
+    If optionIndex <= 4 And Clothing[i] <> correctOption Then
+      optionsArray[optionIndex] = Clothing[i]
+      optionsArraypic[optionIndex] = ClothingPics[i]
+      optionsArraySound[optionIndex] = ClothingSounds[i]
+      optionIndex = optionIndex + 1
+    EndIf
+  EndFor
+
+  
+  ' Mezclar las opciones
+  For i = Array.GetItemCount(optionsArray) To 2 Step -1
+    j = Math.GetRandomNumber(i)
+    temp = optionsArray[i]
+    temp1 = optionsArraypic [i]
+    temp2 = optionsArraySound[i]
+    optionsArray[i] = optionsArray[j]
+    optionsArraypic[i] = optionsArraypic[j]
+    optionsArraySound[i] = optionsArraySound[j]
+    optionsArray[j] = temp
+    optionsArraypic[j] = temp1
+    optionsArraySound[j] = temp2
+  EndFor
+  
+  
+  ' Mostrar la pregunta y opciones
+  GraphicsWindow.FontSize = 40
+  GraphicsWindow.DrawText(730, 135, correctOption)
+  GraphicsWindow.FontSize = 25
+  GraphicsWindow.BrushColor = GraphicsWindow.GetColorFromRGB(0,0,0) ' Negro
+  
+  op1 = Controls.AddButton(optionsArray[1], 400, 400)
+  op1S = Controls.AddButton("🎶",555,400)
+  GraphicsWindow.DrawImage(optionsArraypic[1],400,236)
+  op2 = Controls.AddButton(optionsArray[2], 800, 400)
+  op2S = Controls.AddButton("🎶",955,400)
+  GraphicsWindow.DrawImage(optionsArraypic[2],800,236)
+  op3 = Controls.AddButton(optionsArray[3], 400, 700)
+  op3S = Controls.AddButton("🎶",555,700)
+  GraphicsWindow.DrawImage(optionsArraypic[3],400,536)
+  op4 = Controls.AddButton(optionsArray[4], 800, 700)
+  op4S = Controls.AddButton("🎶",955,700)  
+  GraphicsWindow.DrawImage(optionsArraypic[4],800,536)
+EndSub
+
+Sub FoodAndDrinkOptions
+  GraphicsWindow.BrushColor = GraphicsWindow.GetColorFromRGB(255,255,255) ' Blanco
+  ' Generar un número aleatorio para seleccionar la opcion
+  correctIndex = Math.GetRandomNumber(12)
+  correctOption = FoodAndDrinks[correctIndex]
+  correctOptionpic= FoodAndDrinksPics[correctIndex]
+  correctOptionSound = FoodAndDrinksSounds[correctIndex]
+  
+  ' Crear un array de opciones con la opción correcta y tres opciones incorrectas
+  optionsArray[1] = correctOption
+  optionIndex = 2
+  optionsArraypic[1] = correctOptionpic
+  optionsArraySound[1] = correctOptionSound
+  
+  ' Llenar el array con opciones incorrectas (excluyendo la correcta)
+  For  i = Math.GetRandomNumber(12)  To 12
+    If optionIndex <= 4 And FoodAndDrinks[i] <> correctOption Then
+      optionsArray[optionIndex] = FoodAndDrinks[i]
+      optionsArraypic[optionIndex] = FoodAndDrinksPics[i]
+      optionsArraySound[optionIndex] = FoodAndDrinksSounds[i]
+      optionIndex = optionIndex + 1
+    EndIf
+  EndFor
+
+  
+  ' Mezclar las opciones
+  For i = Array.GetItemCount(optionsArray) To 2 Step -1
+    j = Math.GetRandomNumber(i)
+    temp = optionsArray[i]
+    temp1 = optionsArraypic [i]
+    temp2 = optionsArraySound[i]
+    optionsArray[i] = optionsArray[j]
+    optionsArraypic[i] = optionsArraypic[j]
+    optionsArraySound[i] = optionsArraySound[j]
+    optionsArray[j] = temp
+    optionsArraypic[j] = temp1
+    optionsArraySound[j] = temp2
+  EndFor
+  
+  
+  ' Mostrar la pregunta y opciones
+  GraphicsWindow.FontSize = 40
+  GraphicsWindow.DrawText(730, 135, correctOption)
+  GraphicsWindow.FontSize = 25
+  GraphicsWindow.BrushColor = GraphicsWindow.GetColorFromRGB(0,0,0) ' Negro
+  
+  op1 = Controls.AddButton(optionsArray[1], 400, 400)
+  op1S = Controls.AddButton("🎶",555,400)
+  GraphicsWindow.DrawImage(optionsArraypic[1],400,236)
+  op2 = Controls.AddButton(optionsArray[2], 800, 400)
+  op2S = Controls.AddButton("🎶",955,400)
+  GraphicsWindow.DrawImage(optionsArraypic[2],800,236)
+  op3 = Controls.AddButton(optionsArray[3], 400, 700)
+  op3S = Controls.AddButton("🎶",555,700)
+  GraphicsWindow.DrawImage(optionsArraypic[3],400,536)
+  op4 = Controls.AddButton(optionsArray[4], 800, 700)
+  op4S = Controls.AddButton("🎶",955,700)  
+  GraphicsWindow.DrawImage(optionsArraypic[4],800,536)
+
+EndSub
+
+Sub BodyPartsOptions
+  GraphicsWindow.BrushColor = GraphicsWindow.GetColorFromRGB(255,255,255) ' Blanco
+  ' Generar un número aleatorio para seleccionar la opcion
+  correctIndex = Math.GetRandomNumber(12)
+  correctOption = BodyParts[correctIndex]
+  correctOptionpic= BodyPartsPics[correctIndex]
+  correctOptionSound = BodyPartsSounds[correctIndex]
+  
+  ' Crear un array de opciones con la opción correcta y tres opciones incorrectas
+  optionsArray[1] = correctOption
+  optionIndex = 2
+  optionsArraypic[1] = correctOptionpic
+  optionsArraySound[1] = correctOptionSound
+  
+  ' Llenar el array con opciones incorrectas (excluyendo la correcta)
+  For  i = Math.GetRandomNumber(12)  To 12
+    If optionIndex <= 4 And BodyParts[i] <> correctOption Then
+      optionsArray[optionIndex] = BodyParts[i]
+      optionsArraypic[optionIndex] = BodyPartsPics[i]
+      optionsArraySound[optionIndex] = BodyPartsSounds[i]
+      optionIndex = optionIndex + 1
+    EndIf
+  EndFor
+
+  
+  ' Mezclar las opciones
+  For i = Array.GetItemCount(optionsArray) To 2 Step -1
+    j = Math.GetRandomNumber(i)
+    temp = optionsArray[i]
+    temp1 = optionsArraypic [i]
+    temp2 = optionsArraySound[i]
+    optionsArray[i] = optionsArray[j]
+    optionsArraypic[i] = optionsArraypic[j]
+    optionsArraySound[i] = optionsArraySound[j]
+    optionsArray[j] = temp
+    optionsArraypic[j] = temp1
+    optionsArraySound[j] = temp2
+  EndFor
+  
+  
+  ' Mostrar la pregunta y opciones
+  GraphicsWindow.FontSize = 40
+  GraphicsWindow.DrawText(730, 135, correctOption)
+  GraphicsWindow.FontSize = 25
+  GraphicsWindow.BrushColor = GraphicsWindow.GetColorFromRGB(0,0,0) ' Negro
+  
+  op1 = Controls.AddButton(optionsArray[1], 400, 400)
+  op1S = Controls.AddButton("🎶",555,400)
+  GraphicsWindow.DrawImage(optionsArraypic[1],400,236)
+  op2 = Controls.AddButton(optionsArray[2], 800, 400)
+  op2S = Controls.AddButton("🎶",955,400)
+  GraphicsWindow.DrawImage(optionsArraypic[2],800,236)
+  op3 = Controls.AddButton(optionsArray[3], 400, 700)
+  op3S = Controls.AddButton("🎶",555,700)
+  GraphicsWindow.DrawImage(optionsArraypic[3],400,536)
+  op4 = Controls.AddButton(optionsArray[4], 800, 700)
+  op4S = Controls.AddButton("🎶",955,700)  
+  GraphicsWindow.DrawImage(optionsArraypic[4],800,536)
+
+EndSub
+
+Sub NumbersAndCountingOptions
+  GraphicsWindow.BrushColor = GraphicsWindow.GetColorFromRGB(255,255,255) ' Blanco
+  ' Generar un número aleatorio para seleccionar la opcion
+  correctIndex = Math.GetRandomNumber(12)
+  correctOption = NumbersAndCounting[correctIndex]
+  correctOptionpic= NumbersAndCountingPics[correctIndex]
+  correctOptionSound = NumbersAndCountingSounds[correctIndex]
+  
+  ' Crear un array de opciones con la opción correcta y tres opciones incorrectas
+  optionsArray[1] = correctOption
+  optionIndex = 2
+  optionsArraypic[1] = correctOptionpic
+  optionsArraySound[1] = correctOptionSound
+  
+  ' Llenar el array con opciones incorrectas (excluyendo la correcta)
+  For  i = Math.GetRandomNumber(12)  To 12
+    If optionIndex <= 4 And NumbersAndCounting[i] <> correctOption Then
+      optionsArray[optionIndex] = NumbersAndCounting[i]
+      optionsArraypic[optionIndex] = NumbersAndCountingPics[i]
+      optionsArraySound[optionIndex] = NumbersAndCountingSounds[i]
+      optionIndex = optionIndex + 1
+    EndIf
+  EndFor
+
+  
+  ' Mezclar las opciones
+  For i = Array.GetItemCount(optionsArray) To 2 Step -1
+    j = Math.GetRandomNumber(i)
+    temp = optionsArray[i]
+    temp1 = optionsArraypic [i]
+    temp2 = optionsArraySound[i]
+    optionsArray[i] = optionsArray[j]
+    optionsArraypic[i] = optionsArraypic[j]
+    optionsArraySound[i] = optionsArraySound[j]
+    optionsArray[j] = temp
+    optionsArraypic[j] = temp1
+    optionsArraySound[j] = temp2
+  EndFor
+  
+  
+  ' Mostrar la pregunta y opciones
+  GraphicsWindow.FontSize = 40
+  GraphicsWindow.DrawText(730, 135, correctOption)
+  GraphicsWindow.FontSize = 25
+  GraphicsWindow.BrushColor = GraphicsWindow.GetColorFromRGB(0,0,0) ' Negro
+  
+  op1 = Controls.AddButton(optionsArray[1], 400, 400)
+  op1S = Controls.AddButton("🎶",555,400)
+  GraphicsWindow.DrawImage(optionsArraypic[1],400,236)
+  op2 = Controls.AddButton(optionsArray[2], 800, 400)
+  op2S = Controls.AddButton("🎶",955,400)
+  GraphicsWindow.DrawImage(optionsArraypic[2],800,236)
+  op3 = Controls.AddButton(optionsArray[3], 400, 700)
+  op3S = Controls.AddButton("🎶",555,700)
+  GraphicsWindow.DrawImage(optionsArraypic[3],400,536)
+  op4 = Controls.AddButton(optionsArray[4], 800, 700)
+  op4S = Controls.AddButton("🎶",955,700)  
+  GraphicsWindow.DrawImage(optionsArraypic[4],800,536)
+
+EndSub
+
+Sub TimeAndWeatherOptions
+  GraphicsWindow.BrushColor = GraphicsWindow.GetColorFromRGB(255,255,255) ' Blanco
+  ' Generar un número aleatorio para seleccionar la opcion
+  correctIndex = Math.GetRandomNumber(12)
+  correctOption = TimeAndWeather[correctIndex]
+  correctOptionpic= TimeAndWeatherPics[correctIndex]
+  correctOptionSound = TimeAndWeatherSounds[correctIndex]
+  
+  ' Crear un array de opciones con la opción correcta y tres opciones incorrectas
+  optionsArray[1] = correctOption
+  optionIndex = 2
+  optionsArraypic[1] = correctOptionpic
+  optionsArraySound[1] = correctOptionSound
+  
+  ' Llenar el array con opciones incorrectas (excluyendo la correcta)
+  For  i = Math.GetRandomNumber(12)  To 12
+    If optionIndex <= 4 And TimeAndWeather[i] <> correctOption Then
+      optionsArray[optionIndex] = TimeAndWeather[i]
+      optionsArraypic[optionIndex] = TimeAndWeatherPics[i]
+      optionsArraySound[optionIndex] = TimeAndWeatherSounds[i]
+      optionIndex = optionIndex + 1
+    EndIf
+  EndFor
+
+  
+  ' Mezclar las opciones
+  For i = Array.GetItemCount(optionsArray) To 2 Step -1
+    j = Math.GetRandomNumber(i)
+    temp = optionsArray[i]
+    temp1 = optionsArraypic [i]
+    temp2 = optionsArraySound[i]
+    optionsArray[i] = optionsArray[j]
+    optionsArraypic[i] = optionsArraypic[j]
+    optionsArraySound[i] = optionsArraySound[j]
+    optionsArray[j] = temp
+    optionsArraypic[j] = temp1
+    optionsArraySound[j] = temp2
+  EndFor
+  
+  
+  ' Mostrar la pregunta y opciones
+  GraphicsWindow.FontSize = 40
+  GraphicsWindow.DrawText(730, 135, correctOption)
+  GraphicsWindow.FontSize = 25
+  GraphicsWindow.BrushColor = GraphicsWindow.GetColorFromRGB(0,0,0) ' Negro
+  
+  op1 = Controls.AddButton(optionsArray[1], 400, 400)
+  op1S = Controls.AddButton("🎶",555,400)
+  GraphicsWindow.DrawImage(optionsArraypic[1],400,236)
+  op2 = Controls.AddButton(optionsArray[2], 800, 400)
+  op2S = Controls.AddButton("🎶",955,400)
+  GraphicsWindow.DrawImage(optionsArraypic[2],800,236)
+  op3 = Controls.AddButton(optionsArray[3], 400, 700)
+  op3S = Controls.AddButton("🎶",555,700)
+  GraphicsWindow.DrawImage(optionsArraypic[3],400,536)
+  op4 = Controls.AddButton(optionsArray[4], 800, 700)
+  op4S = Controls.AddButton("🎶",955,700)  
+  GraphicsWindow.DrawImage(optionsArraypic[4],800,536)
+
+EndSub
+
+Sub ActionsAndVerbsOptions
+  GraphicsWindow.BrushColor = GraphicsWindow.GetColorFromRGB(255,255,255) ' Blanco
+  ' Generar un número aleatorio para seleccionar la opcion
+  correctIndex = Math.GetRandomNumber(12)
+  correctOption = ActionsAndVerbs[correctIndex]
+  correctOptionpic= ActionsAndVerbsPics[correctIndex]
+  correctOptionSound = ActionsAndVerbsSounds[correctIndex]
+  
+  ' Crear un array de opciones con la opción correcta y tres opciones incorrectas
+  optionsArray[1] = correctOption
+  optionIndex = 2
+  optionsArraypic[1] = correctOptionpic
+  optionsArraySound[1] = correctOptionSound
+  
+  ' Llenar el array con opciones incorrectas (excluyendo la correcta)
+  For  i = Math.GetRandomNumber(12)  To 12
+    If optionIndex <= 4 And ActionsAndVerbs[i] <> correctOption Then
+      optionsArray[optionIndex] = ActionsAndVerbs[i]
+      optionsArraypic[optionIndex] = ActionsAndVerbsPics[i]
+      optionsArraySound[optionIndex] = ActionsAndVerbsSounds[i]
+      optionIndex = optionIndex + 1
+    EndIf
+  EndFor
+
+  
+  ' Mezclar las opciones
+  For i = Array.GetItemCount(optionsArray) To 2 Step -1
+    j = Math.GetRandomNumber(i)
+    temp = optionsArray[i]
+    temp1 = optionsArraypic [i]
+    temp2 = optionsArraySound[i]
+    optionsArray[i] = optionsArray[j]
+    optionsArraypic[i] = optionsArraypic[j]
+    optionsArraySound[i] = optionsArraySound[j]
+    optionsArray[j] = temp
+    optionsArraypic[j] = temp1
+    optionsArraySound[j] = temp2
+  EndFor
+  
+  
+  ' Mostrar la pregunta y opciones
+  GraphicsWindow.FontSize = 40
+  GraphicsWindow.DrawText(730, 135, correctOption)
+  GraphicsWindow.FontSize = 25
+  GraphicsWindow.BrushColor = GraphicsWindow.GetColorFromRGB(0,0,0) ' Negro
+  
+  op1 = Controls.AddButton(optionsArray[1], 400, 400)
+  op1S = Controls.AddButton("🎶",555,400)
+  GraphicsWindow.DrawImage(optionsArraypic[1],400,236)
+  op2 = Controls.AddButton(optionsArray[2], 800, 400)
+  op2S = Controls.AddButton("🎶",955,400)
+  GraphicsWindow.DrawImage(optionsArraypic[2],800,236)
+  op3 = Controls.AddButton(optionsArray[3], 400, 700)
+  op3S = Controls.AddButton("🎶",555,700)
+  GraphicsWindow.DrawImage(optionsArraypic[3],400,536)
+  op4 = Controls.AddButton(optionsArray[4], 800, 700)
+  op4S = Controls.AddButton("🎶",955,700)  
+  GraphicsWindow.DrawImage(optionsArraypic[4],800,536)
+
+EndSub
+
+Sub Level1
+  GraphicsWindow.Clear()
+  GraphicsWindow.BackgroundColor = GraphicsWindow.GetColorFromRGB(255, 255, 255) ' Blanco
+  GraphicsWindow.FontSize = 25
+  GraphicsWindow.CanResize = "False"
+  GraphicsWindow.BrushColor = GraphicsWindow.GetColorFromRGB(255, 255, 255) ' Blanco
+  GraphicsWindow.DrawImage(background_level_1,0,0)
+  
+
+' Agregar elementos específicos de nivel aquí
+  canRunAnswerClicked = "True"
+  ColorOptions()
+  
+  ReturnButton = Controls.AddButton(" Regresar ", 1224.5, 50)
+EndSub
+
+Sub Level2
+  GraphicsWindow.Clear()
+  GraphicsWindow.BackgroundColor = GraphicsWindow.GetColorFromRGB(255, 255, 255) ' Blanco
+  GraphicsWindow.FontSize = 22
+  GraphicsWindow.CanResize = "False"
+  GraphicsWindow.BrushColor = GraphicsWindow.GetColorFromRGB(0, 0, 0) ' Negro
+  GraphicsWindow.DrawImage(background_level_2,0,0)
+  
+  ' Agregar elementos específicos de nivel aquí
+  canRunAnswerClicked = "True"
+  AnimalOptions()
+  ReturnButton = Controls.AddButton(" Regresar ", 1224.5, 50)
+EndSub
+
+Sub Level3
+  GraphicsWindow.Clear()
+  GraphicsWindow.BackgroundColor = GraphicsWindow.GetColorFromRGB(255, 255, 255) ' Blanco
+  GraphicsWindow.FontSize = 22
+  GraphicsWindow.CanResize = "False"
+  GraphicsWindow.BrushColor = GraphicsWindow.GetColorFromRGB(0, 0, 0) ''Negro
+  GraphicsWindow.DrawImage(background_level_3,0,0)
+  
+  
+  ' Agregar elementos específicos de nivel aquí
+  canRunAnswerClicked = "True"
+  EverydayObjectsOptions()
+  ReturnButton = Controls.AddButton(" Regresar ", 1224.5, 50)
+EndSub
+
+Sub Level4
+  GraphicsWindow.Clear()
+  GraphicsWindow.BackgroundColor = GraphicsWindow.GetColorFromRGB(255, 255, 255) ' Blanco
+  GraphicsWindow.FontSize = 22
+  GraphicsWindow.CanResize = "False"
+  GraphicsWindow.BrushColor = GraphicsWindow.GetColorFromRGB(0, 0, 0) ' Negro
+  GraphicsWindow.DrawImage(background_level_4,0,0)
+  
+  
+  ' Agregar elementos específicos de nivel aquí
+  canRunAnswerClicked = "True"
+  GeometricShapesOptions()
+  
+  ReturnButton = Controls.AddButton(" Regresar ", 1224.5, 50)
+EndSub
+
+Sub Level5
+  GraphicsWindow.Clear()
+  GraphicsWindow.BackgroundColor = GraphicsWindow.GetColorFromRGB(255, 255, 255) ' Blanco
+  GraphicsWindow.FontSize = 22
+  GraphicsWindow.CanResize = "False"
+  GraphicsWindow.BrushColor = GraphicsWindow.GetColorFromRGB(0, 0, 0) ' Negro
+  GraphicsWindow.DrawImage(background_level_5,0,0)
+  
+
+  ' Agregar elementos específicos de nivel aquí
+  canRunAnswerClicked = "True"
+  ClothingOptions()
+  ReturnButton = Controls.AddButton(" Regresar ", 1224.5, 50)
+EndSub
+
+Sub Level6
+  GraphicsWindow.Clear()
+  GraphicsWindow.BackgroundColor = GraphicsWindow.GetColorFromRGB(255, 255, 255) ' Blanco
+  GraphicsWindow.FontSize = 22
+  GraphicsWindow.CanResize = "False"
+  GraphicsWindow.BrushColor = GraphicsWindow.GetColorFromRGB(0, 0, 0) ' Negro
+  GraphicsWindow.DrawImage(background_level_6,0,0)
+  
+
+  ' Agregar elementos específicos de nivel aquí
+  canRunAnswerClicked = "True"
+  FoodAndDrinkOptions()
+  ReturnButton = Controls.AddButton(" Regresar ", 1224.5, 50)
+EndSub
+
+Sub Level7
+  GraphicsWindow.Clear()
+  GraphicsWindow.BackgroundColor = GraphicsWindow.GetColorFromRGB(255, 255, 255) ' Blanco
+  GraphicsWindow.FontSize = 22
+  GraphicsWindow.CanResize = "False"
+  GraphicsWindow.BrushColor = GraphicsWindow.GetColorFromRGB(0, 0, 0) ' Negro
+  GraphicsWindow.DrawImage(background_level_7,0,0)
+  
+
+  ' Agregar elementos específicos de nivel aquí
+  canRunAnswerClicked = "True"
+  BodyPartsOptions()
+  ReturnButton = Controls.AddButton(" Regresar ", 1224.5, 50)
+EndSub
+
+Sub Level8
+  GraphicsWindow.Clear()
+  GraphicsWindow.BackgroundColor = GraphicsWindow.GetColorFromRGB(255, 255, 255) ' Blanco
+  GraphicsWindow.FontSize = 22
+  GraphicsWindow.CanResize = "False"
+  GraphicsWindow.BrushColor = GraphicsWindow.GetColorFromRGB(0, 0, 0) ' Negro
+  GraphicsWindow.DrawImage(background_level_8,0,0)
+  
+
+  ' Agregar elementos específicos de nivel aquí
+  canRunAnswerClicked = "True"
+  NumbersAndCountingOptions()
+  ReturnButton = Controls.AddButton(" Regresar ", 1224.5, 50)
+EndSub
+
+Sub Level9
+  GraphicsWindow.Clear()
+  GraphicsWindow.BackgroundColor = GraphicsWindow.GetColorFromRGB(255, 255, 255) ' Blanco
+  GraphicsWindow.FontSize = 22
+  GraphicsWindow.CanResize = "False"
+  GraphicsWindow.BrushColor = GraphicsWindow.GetColorFromRGB(0, 0, 0) ''Negro
+  GraphicsWindow.DrawImage(background_level_9,0,0)
+  
+
+  ' Agregar elementos específicos de nivel aquí
+  canRunAnswerClicked = "True"
+  TimeAndWeatherOptions()
+  
+  ReturnButton = Controls.AddButton(" Regresar ", 1224.5, 50)
+EndSub
+
+Sub Level10
+  GraphicsWindow.Clear()
+  GraphicsWindow.BackgroundColor = GraphicsWindow.GetColorFromRGB(255, 255, 255) ' Blanco
+  GraphicsWindow.FontSize = 22
+  GraphicsWindow.CanResize = "False"
+  GraphicsWindow.BrushColor = GraphicsWindow.GetColorFromRGB(0, 0, 0) ' Negro
+  GraphicsWindow.DrawImage(background_level_10,0,0)
+  
+
+  ' Agregar elementos específicos de nivel aquí
+  canRunAnswerClicked = "True"
+  ActionsAndVerbsOptions()
+  ReturnButton = Controls.AddButton(" Regresar ", 1224.5, 50)
+EndSub
+
+'Definición del evento de los botones
+Controls.ButtonClicked = Button_Clicked
+
+Sub Button_Clicked
+  clickedButton = Controls.LastClickedButton
+  
+  ' Definición del botón de salida
+  If clickedButton = ExitButton Then
+    Program.End()
+  ElseIf clickedButton = StartButton Or clickedButton = ReturnButtonB Then
+    CreateRuleWindow()
+  ElseIf clickedButton = NextButton Or clickedButton = ReturnButton Then
+    LevelSelect()
+  ElseIf clickedButton = ReturnButtonA Then
+    CreateMainMenu()
+  EndIf
+  
+  ' Verificar si se hizo clic en algún botón de nivel
+  For level = 1 To 10
+    If clickedButton = LevelButtons[level] Then
+      ' Asignar el nivel a una variable global para que esté disponible en AnswerClicked
+      currentLevel = level
+      ' Llamar a la subrutina del nivel
+      CallLevelSubroutine()
+    EndIf
+  EndFor
+EndSub
+
+Sub CallLevelSubroutine
+  If currentLevel = 1 Then
+    Level1()
+  ElseIf currentLevel = 2 Then
+    Level2()
+  ElseIf currentLevel = 3 Then
+    Level3()
+  ElseIf currentLevel = 4 Then
+    Level4()
+  ElseIf currentLevel = 5 Then
+    Level5()
+  ElseIf currentLevel = 6 Then
+    Level6()
+  ElseIf currentLevel = 7 Then
+    Level7()
+  ElseIf currentLevel = 8 Then
+    Level8()
+  ElseIf currentLevel = 9 Then
+    Level9()
+  ElseIf currentLevel = 10 Then
+    Level10()
+  EndIf
+  
+  ' Asignar la subrutina AnswerClicked al evento Controls.ButtonClicked
+  Controls.ButtonClicked = AnswerClicked
+EndSub
+
+
+' Subrutina AnswerClicked
+Sub AnswerClicked
+
+  If canRunAnswerClicked = "True" Then
+    answerClicked = Controls.LastClickedButton
+
+    If answerClicked = op1 And Controls.GetButtonCaption(op1) = correctOption Then
+      Sound.Play(WinnerSound)
+      GraphicsWindow.ShowMessage("FELICIDADES", "Message")
+      Sound.Stop(WinnerSound)
+      LevelSelect()
+    ElseIf answerClicked = op2 And Controls.GetButtonCaption(op2) = correctOption Then
+      Sound.Play(WinnerSound)
+      GraphicsWindow.ShowMessage("FELICIDADES", "Message")
+      Sound.Stop(WinnerSound)
+      LevelSelect()
+    ElseIf answerClicked = op3 And Controls.GetButtonCaption(op3) = correctOption Then
+      Sound.Play(WinnerSound)
+      GraphicsWindow.ShowMessage("FELICIDADES", "Message")
+      Sound.Stop(WinnerSound)
+      LevelSelect()
+    ElseIf answerClicked = op4 And Controls.GetButtonCaption(op4) = correctOption Then
+      Sound.Play(WinnerSound)
+      GraphicsWindow.ShowMessage("FELICIDADES", "Message")
+      Sound.Stop(WinnerSound)
+      LevelSelect()
+    ElseIf answerClicked = ReturnButton Then
+      LevelSelect()
+    ElseIf (answerClicked = op1S) Or (answerClicked = op2S) Or (answerClicked = op3S) Or (answerClicked = op4S) Then
+      If answerClicked = op1S Then
+        Sound.Play(optionsArraySound[1])
+        Program.Delay(2000)
+        Sound.Stop(optionsArraySound[1])
+      ElseIf answerClicked = op2S Then
+        Sound.Play(optionsArraySound[2])
+        Program.Delay(2000)
+        Sound.Stop(optionsArraySound[2])
+      ElseIf answerClicked = op3S Then 
+        Sound.Play(optionsArraySound[3])
+        Program.Delay(2000)
+        Sound.Stop(optionsArraySound[3])
+      ElseIf answerClicked = op4S Then
+        Sound.Play(optionsArraySound[4])
+        Program.Delay(2000)
+        Sound.Stop(optionsArraySound[4])
+      EndIf
+    Else
+      Sound.Play(GameOverSound)
+      GraphicsWindow.ShowMessage("VUELVE A INTENTAR", "Message")
+      Sound.Stop(GameOverSound)
+    EndIf
+  EndIf
+
+EndSub
+
+
+CreateMainMenu()
+
+  While soundFlag = 1
+    Sound.PlayAndWait(backgroundSound)
+    Program.Delay(1000)
+  EndWhile
+  
+soundFlag = 1
